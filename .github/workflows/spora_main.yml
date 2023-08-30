@@ -3,6 +3,13 @@ name: "KiCad CI/CD for Spora main board"
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
+  workflow_dispatch:
+    paths:
+        - 'pcb_main/*.sch'
+        - 'pcb_main/*.kicad_pcb'
+        - 'pcb_main/*.kibot.yaml'
+        - 'pcb_main/Makefile'
+        - '.github/workflows/spora_main.yml'
   push:
     paths:
       - 'pcb_main/*.sch'
